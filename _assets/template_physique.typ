@@ -33,7 +33,7 @@
 #let travail = mbox.with("Travail à faire", emoji.pencil, c-bg-gray)
 #let important = mbox.with("Important", emoji.excl, rgb("#d35400"))
 #let application = mbox.with("Application", emoji.wrench, c-primary)
-
+#let  experience = mbox.with("Expérience", emoji.testtube, rgb("#ec98b3"))
 // 3. Gestion des Exercices (avec compteur automatique)
 #let exercice-compteur = counter("exercise")
 #let exercice(body) = {
