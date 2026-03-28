@@ -55,6 +55,5 @@ En chauffant le précipité $C u(O H)_2$ celui-ci s'est transformé en oxyde de 
 #travail[
 + Quels sont les réactifs et les produits de cette transformation chimique.
 + Ecrire l'équation chimique associée à cette transformation. 
-
-Faire un diagramme décrivant le cycle de l'élément cuivre.
++ Faire un diagramme décrivant le cycle de l'élément cuivre.
 ]
