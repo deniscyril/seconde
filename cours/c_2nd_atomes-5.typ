@@ -27,7 +27,8 @@
   - *~1900* : Thomson découvre l'*électron*
   - *1905* : Jean Perrin apporte la preuve de l'existence de l'*atome*
   - *1911* : Rutherford découvre le *noyau* de l'atome
-  - *~1930* : Découverte du *proton*
+  - *1917* : Rutherford découvre aussi le *proton*
+  - *1932*: Découverte du neutron par Chaddwick
 ]
 
 = Constitution de l'atome

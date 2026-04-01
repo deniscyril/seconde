@@ -15,7 +15,7 @@
 
 #travail[
 + Faire un schéma légendé de l'expérience. (contenu du tube avant, après réaction)
-+ Nommer les réactifs et le produits.
++ Nommer les réactifs et les produits.
 + Sous quelle forme retrouve-t-on l'élement cuivre à la fin de cette réaction. 
 ]
 
@@ -45,15 +45,32 @@ En chauffant le précipité $C u(O H)_2$ celui-ci s'est transformé en oxyde de 
 
 ]
 
-== Retour vers le cuivre 
+== Régénération du cuivre Cu
+
 #experience[
-  - Introduire 2 spatules d'un mélange CuO et C
-  - Chauffer fortement jusqu'à apparition d'une susbsance orangée.
-  Le réaction produit du cuivre et du dioxyde de carbone.
+- introduire de la paille de fer (Fe) dans un tube à essai
+- verser dans ce tube environ 1 mL d'une solution de sulfate de cuivre   
+]
+#travail[
++ Schématiser l'expérience en représentant le tube au début de l'expérience puis après apparition du cuivre à la surface du fer.
++ Comment évolue la quantité d'ions cuivre $C u^("2+")$ pendant cette réaction ?
+
 ]
 
-#travail[
-+ Quels sont les réactifs et les produits de cette transformation chimique.
-+ Ecrire l'équation chimique associée à cette transformation. 
-+ Faire un diagramme décrivant le cycle de l'élément cuivre.
-]
+*Je retiens* 
+
+- L'élément cuivre se note Cu.  Il représente ce qu'il y a de commun aux espèces chimiques: $C u_("(s)")$, $C u^"2+"$, $C u(O H)_2$ et $ C u O$.
+- Dans une trasnformation chimique, il y a toujours _conservation_ de l'élément chimique.
+#lignes_reponse(6)
+
+// #experience[
+//   - Introduire 2 spatules d'un mélange CuO et C
+//   - Chauffer fortement jusqu'à apparition d'une susbsance orangée.
+//   Le réaction produit du cuivre et du dioxyde de carbone.
+// ]
+
+// #travail[
+// + Quels sont les réactifs et les produits de cette transformation chimique.
+// + Ecrire l'équation chimique associée à cette transformation. 
+// + Faire un diagramme décrivant le cycle de l'élément cuivre.
+// ]
