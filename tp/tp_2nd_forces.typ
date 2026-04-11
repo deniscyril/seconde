@@ -48,7 +48,7 @@
 
   // --- LIGNE 6 ---
  image("figures/atelier6.jpeg", width: 80%), 
-  [Systèle: la boule d'aluminium accrochée à la ficelle],
+  [Système: la boule d'aluminium accrochée à la ficelle],
  image("figures/atelier7.jpeg", width: 60%), 
   [Système: Le bouchon qui flotte],
    image("figures/atelier5.jpeg", width: 60%), 

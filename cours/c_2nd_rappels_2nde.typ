@@ -75,7 +75,7 @@ Les chiffres significatifs donnent une indication sur la précision d'une mesure
 
 Exemple
 
-Soir L la lageur d'une feuille. 
+Soit L la largeur d'une feuille. 
 - L = 21 cm 2 chiffres significatifs
 - L = 21,0 cm 3 chiffres significatifs, mesure plus précise
 

@@ -43,7 +43,7 @@ C'est un document qui va "raconter le mouvement" il va donner des informations s
 
   _La vitesse du tracteur noir diminue car la distance entre 2 images successives diminue pendant le mouvement_.
 
-+ Nommer la trjectoire du tracteur noir et proposer un nom pour le mouvement.
++ Nommer la trajectoire du tracteur noir et proposer un nom pour le mouvement.
 
   _La trajectoire est une droite. C'est un mouvement rectiligne ralenti_.
 

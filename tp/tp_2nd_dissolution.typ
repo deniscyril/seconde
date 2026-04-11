@@ -2,7 +2,7 @@
 
 // On applique le template à tout le document
 #show: conf
-#chapitre[TP Dissolution 🧪]
+#chapitre[TP Dissolution]
 
 = Préparation de solutions par dissolution
 == Contexte

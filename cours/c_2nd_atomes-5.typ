@@ -41,10 +41,7 @@
   - Des *électrons* qui sont autour du noyau
 
   #v(0.6em)
-  #figure_placeholder[
-    Schéma d'un atome : noyau central (protons + neutrons) entouré de 3 couches
-    électroniques concentriques ($n=1$, $n=2$, $n=3$) avec des électrons ($e^-$) sur chaque couche.
-  ]
+  #align(center)[#image("figures/schema_atome.png", width: 55%)]
 ]
 
 #align(center)[
@@ -283,7 +280,7 @@ EXERCICE 9 p 60
   + Combien y a-t-il de protons, de neutrons et de nucléons dans ce noyau ?
   + Calculer la masse approximative de cet atome. \
     _Donnée : $m_"nucléon" = 1,67 times 10^(-27)$ kg_
-  + La masse réelle de l'atome de fer est $9,27 times 10^(-26)$ kg. Comparer avec le résultat
+  + La masse réelle de l'atome de fer est $9,37 times 10^(-26)$ kg. Comparer avec le résultat
     précédent. L'approximation est-elle justifiée ?
 
 ]
@@ -292,7 +289,7 @@ EXERCICE 9 p 60
 
 1. Un atome de fluor contient 19 nucléons et 9 protons. Combien contient-il de neutrons ?
 2. Un atome de phosphore de symbole P possède 31 nucléons et 15 protons. Ecrire la représentation symbolique de son noyau.
-3. Expliquer pourquoi on peut affimer que tous les noyaux des atomes de l'univers sont chargés positivement ?
+3. Expliquer pourquoi on peut affirmer que tous les noyaux des atomes de l'univers sont chargés positivement ?
 
 ]
 #exercice[
@@ -315,11 +312,6 @@ Le mercure, seul métal liquide à température ambiante, a une densité très �
 //  #lignes_reponse(6)
 ]
 #exercice[
-1. Un atome de fluor contient 19 nucléons et 9 protons. Combien contient-il de neutrons ?
-2. Un atome de phosphore de symbole P possède 31 nucléons et 15 protons. Ecrire la représentation symbolique de son noyau.
-3. Expliquer pourquoi on peut affimer que tous les noyaux des atomes de l'univers sont chargés positivement ?
-]
-#exercice[
   + Écrire la structure électronique de $attach("F", bl:9)$ et de $attach("Cl", bl:17)$.
     Combien ont-ils d'électrons de valence ? Pourquoi appartiennent-ils à la même famille ?
   + Écrire la structure électronique de $attach("Li", bl:3)$ et de $attach("Na", bl:11)$.
@@ -330,4 +322,5 @@ Le mercure, seul métal liquide à température ambiante, a une densité très �
 
   //#lignes_reponse(6)
 ]
-#align(center)[#image("figures/cartes_tableau_periodique.pdf",width:100%)]
+
+#align(center)[#image("figures/cartes_tableau_periodique.pdf",width:130%)]
