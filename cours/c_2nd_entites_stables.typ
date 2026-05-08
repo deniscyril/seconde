@@ -61,11 +61,11 @@ On en déduit deux règles fondamentales :
   *Règle du duet* : H, Li et Be tendent à s'entourer de *2 électrons de valence*, comme He ($1s^2$).
 
   *Règle de l'octet* : tous les autres atomes tendent à s'entourer de *8 électrons de valence*, comme Ne ou Ar.
-
+]
   Pour atteindre cette configuration stable, un atome peut :
   - *gagner ou perdre* des électrons → formation d'*ions*
   - *mettre des électrons en commun* avec d'autres atomes → formation de *molécules*
-]
+#pagebreak()
 
 = Formation d'ions monoatomiques
 
@@ -84,7 +84,7 @@ On en déduit deux règles fondamentales :
   L'atome de fluor $""_9"F"$ a pour structure électronique $1s^2 2s^2 2p^5$ :
   il possède *7 électrons de valence*.
 
-  La structure du néon est proche : $""_10"Ne"$ : 1s^2 2s^2 2p^6 (8 $e^-$ de valence).
+  La structure du néon est proche : $""_10"Ne"$ : $1s^2 2s^2 2p^6$ (8 $e^-$ de valence).
 
   En *gagnant 1 électron*, F atteint la même structure que Ne. Il se transforme en *ion fluorure* :
 
@@ -110,7 +110,7 @@ On en déduit deux règles fondamentales :
 
   + $""_12"Mg"$ — structure $1s^2 2s^2 2p^6 3s^2$ → 2 $e^-$ de valence → *perd 2 $e^-$* → ressemble à Ne → *ion magnésium* $"Mg"^(2+)$
 ]
-
+#pagebreak()
 == Les alcalins
 
 === Présentation
@@ -305,13 +305,11 @@ fragment("O", lewis:(
 #exercice[
   *Formules de Lewis de molécules*
 
-  *Données :* H (1 $e^-$ de valence) ; C (4) ; N (5) ; O (6).
-
-  Pour chaque molécule, tracer la formule de Lewis développée en respectant la règle des 4 doublets (et du duet pour H).
+Pour chaque molécule, tracer la formule de Lewis en respectant la règle de l'octet pour chaque atome (mais du duet pour H).
 
   + Le méthane $"CH"_4$
   + L'ammoniac $"NH"_3$
-  + L'éthanol $"C"_2"H"_5"OH"$ _(formule développée : H—C—C—O—H, avec les H attachés aux C)_
+  + Trouver 2 formules de Lewis qui correspondent à la formule brute: $"C"_2"H"_6"O"$ 
 ]
 
 #exercice[
@@ -319,9 +317,7 @@ fragment("O", lewis:(
 
   La molécule d'éthylène $"C"_2"H"_4$ contient une liaison double C=C.
 
-  *Données :* C (4 $e^-$ de valence) ; H (1 $e^-$ de valence).
-
-  + Combien de liaisons chaque atome C doit-il former au total pour satisfaire la règle de l'octet ?
-  + Proposer une formule de Lewis de l'éthylène. _(Aide : chaque C est lié à 2 atomes H et à l'autre C par une liaison double.)_
+  + Rappeler combien de liaisons chaque atome C doit former au total pour satisfaire la règle de l'octet ?
+  + Proposer une formule de Lewis de l'éthylène. 
   + Vérifier que chaque atome respecte la règle du duet ou de l'octet.
 ]

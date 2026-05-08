@@ -23,6 +23,7 @@
 
 = Découverte de l'atome
 
+
 #important[
   - *~1900* : Thomson découvre l'*électron*
   - *1905* : Jean Perrin apporte la preuve de l'existence de l'*atome*
