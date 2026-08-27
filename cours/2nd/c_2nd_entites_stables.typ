@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 #import "@preview/alchemist:0.1.9": *
 #show: conf
 

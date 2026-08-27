@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 #show: conf
 
@@ -27,7 +27,7 @@ En chimie, on manipule des atomes et des molécules. D'après ce que tu sais dé
 
 Le chimiste a donc besoin, lui aussi, d'un *paquet* adapté à l'échelle des atomes. Ce paquet s'appelle la *mole*.
 
-#align(center)[#image("figures/mole_analogie.png", width: 85%)]
+#align(center)[#image("../figures/mole_analogie.png", width: 85%)]
 
 = La mole et la constante d'Avogadro $N_A$
 

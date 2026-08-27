@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 // Boîte-trou : trait souligné à compléter
 #let trou(w: 3cm) = box(

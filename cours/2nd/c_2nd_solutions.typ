@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 // On applique le template à tout le document
 #show: conf
@@ -6,7 +6,7 @@
 
 = Vocabulaire
 
-#align(center)[#image("figures/solutions_schema_1.jpeg",width:70%)]
+#align(center)[#image("../figures/solutions_schema_1.jpeg",width:70%)]
 
 #définition[
 - Le solvant est le liquide capable de dissoudre un soluté.
@@ -44,7 +44,7 @@ $ C u S O_("4 (s)") arrow C u^"2+" _"(aq)" + S O_"4 (aq)"^"2-"  $
 == Situation
 On dissout du sulfate de cuivre dans de l'eau.
 #figure(grid(columns: (6cm,1fr),align: (top,left) ,
-[#image("figures/solutions_1.png",width:5cm)],
+[#image("../figures/solutions_1.png",width:5cm)],
 [ 1. Comment évolue la concentration quand on augmente la masse du soluté sans modifier le volume de d'eau ?
 2. Comment évolue la concentration quand pour une même quantité de soluté on augmente le volume de la solution ?
 
@@ -64,7 +64,7 @@ Unités: Si m en g et V en L alors c est en g/L
   [Volume de la solution (L)] , [0,50] , [$V_2$] , [0,020],
   [Concentration en masse en soluté (g/L)] , [20] , [4,0], [$C_3$])
  ] Ex 5 p42
-#align(center)[#image("figures/solutions_exo1.jpeg",width:65%)]
+#align(center)[#image("../figures/solutions_exo1.jpeg",width:65%)]
 
 ]
 *FAIRE EX 2 de la fiche*

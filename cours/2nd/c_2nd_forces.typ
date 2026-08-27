@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 // On applique le template à tout le document
 #show: conf
@@ -12,7 +12,7 @@
 - Système: {Punaise}
 - Force du doigt sur la punaise
 
-#align(center)[#image("figures/pouce.png",width:40%)]
+#align(center)[#image("../figures/pouce.png",width:40%)]
 
 == Caractéristiques
 
@@ -25,7 +25,7 @@
 ]
 
 #exemple[L'homme le plus forme du monde qui soulève une altère d'une seule main.
-#align(center)[#image("figures/homme.png",width:40%)]
+#align(center)[#image("../figures/homme.png",width:40%)]
 + Faire un schéma de la situation
 + Sachant que la force exercée par l'homme sur l'altère est 500 N. 
 + Faire la liste de ces caractéristiques
@@ -67,9 +67,9 @@ g: est l'intensité de pesanteur $g=9,8$ N/kg
 
 " Quel objet agit sur le livre ?"
 
-#align(center)[#image("figures/DOI.png",width:80%)]
+#align(center)[#image("../figures/DOI.png",width:80%)]
 
-#align(center)[#image("figures/bilan_des_forces.png",width:40%)]
+#align(center)[#image("../figures/bilan_des_forces.png",width:40%)]
 
 _EXERCICE 19 p 178_
 

@@ -14,11 +14,11 @@
     fill: color.lighten(90%),
     stroke: (left: 4pt + color),
     radius: (top-right: 6pt, bottom-right: 6pt),
-    inset: (x: 1em, y: 1em),
+    inset: (x: 0.9em, y: 0.6em),
     breakable: true,
     [
       #text(fill: color, weight: "bold", size: 1.1em, font: "Fira Sans")[#icon #h(0.5em) #title]
-      #v(0.5em)
+      #v(0.15em)
       #body
     ]
   )

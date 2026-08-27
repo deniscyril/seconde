@@ -24,25 +24,26 @@
 #let chapitre(titre) = {
   pagebreak(weak: true)
   counter(heading).update(0)
-  v(0.5cm)
+  v(0.2cm)
   block(
     width: 100%,
     fill: c-primary,
     radius: 4pt,
-    inset: 20pt,
-    text(fill: white, weight: "bold", size: 18pt, font: "Fira Sans")[#titre]
+    inset: (x: 16pt, y: 10pt),
+    text(fill: white, weight: "bold", size: 16pt, font: "Fira Sans")[#titre]
   )
-  v(1cm)
+  v(0.4cm)
 }
 
 // --- CONFIGURATION GÉNÉRALE ---
 #let conf(body) = {
   set page(
-    margin: (top: 1cm, bottom: 1.5cm, left: 1.5cm, right: 1.5cm),
+    margin: (top: 1cm, bottom: 1.2cm, left: 1.2cm, right: 1.2cm),
     numbering: "1/1",
     header: page-header,
   )
   set text(lang: "fr", font: ("Fira Sans", "Arial", "Linux Libertine"), size: 11pt)
+  set par(leading: 0.6em, spacing: 0.85em)
   show math.equation: set text(font: "Fira Math")
 
   set heading(numbering: (..nums) => {
@@ -54,7 +55,7 @@
 
   show heading.where(level: 1): it => {
     set text(fill: c-primary, font: "Fira Sans", weight: "bold")
-    block(below: 1em, sticky: true)[
+    block(above: 0.8em, below: 0.6em, sticky: true)[
       #it
       #v(-0.3em)
       #line(length: 100%, stroke: 1.5pt + c-primary)

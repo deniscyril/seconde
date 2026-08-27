@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 // On applique le template à tout le document
 #show: conf
@@ -42,7 +42,7 @@
   - Des *électrons* qui sont autour du noyau
 
   #v(0.6em)
-  #align(center)[#image("figures/schema_atome.png", width: 55%)]
+  #align(center)[#image("../figures/schema_atome.png", width: 55%)]
 ]
 
 #align(center)[
@@ -115,7 +115,7 @@ EXERCICE 9 p 60
       - Taille du noyau : $tilde.op 10^(-15)$ m
       - Le noyau est *100 000 fois* plus petit que l'atome
     ],
-    [ #image("figures/ordre-grandeur-atome.png",width:90%) ]
+    [ #image("../figures/ordre-grandeur-atome.png",width:90%) ]
     // block(
     //   width: 5cm,
     //   fill: rgb("#fffbea"),
@@ -169,7 +169,7 @@ EXERCICE 9 p 60
   - Sous-couche $p$ : au maximum *6 électrons*
 
   #v(0.6em)
- #align(center)[#image("figures/Energy_level_diagram-fr.png",width:40%)]
+ #align(center)[#image("../figures/Energy_level_diagram-fr.png",width:40%)]
   *Règles de remplissage :*
   + Par $n$ croissant (couche 1 avant couche 2, etc.)
   + La sous-couche $s$ avant la sous-couche $p$
@@ -225,7 +225,7 @@ EXERCICE 9 p 60
 
 = Familles chimiques et tableau périodique
 
-#align(center)[#image("figures/tableauperiodique_couches.png",width:100%)]
+#align(center)[#image("../figures/tableauperiodique_couches.png",width:100%)]
 
 #définition[
   Les atomes d'une *même colonne* du tableau périodique :
@@ -274,7 +274,7 @@ EXERCICE 9 p 60
 - 4-ème colonne *du bloc p*]
 #pagebreak()
 #chapitre[EXERCICES du chapitre Description de la Matière]
-#align(center)[#image("figures/tableauperiodique_couches.png",width:60%)]
+#align(center)[#image("../figures/tableauperiodique_couches.png",width:60%)]
 #exercice[
   Le noyau de l'atome de fer est noté $attach("Fe", tl: 56, bl: 26)$.
 
@@ -324,4 +324,4 @@ Le mercure, seul métal liquide à température ambiante, a une densité très �
   //#lignes_reponse(6)
 ]
 
-#align(center)[#image("figures/cartes_tableau_periodique.pdf",width:130%)]
+#align(center)[#image("../figures/cartes_tableau_periodique.pdf",width:130%)]
