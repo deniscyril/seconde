@@ -29,7 +29,7 @@
 #let calcbox(n, eq) = block(
   stroke: 0.5pt + rgb("#bfbfbf"),
   fill: rgb("#fafafa"),
-  inset: (x: 8pt, top: 6pt, bottom: 8pt),
+  inset: (x: 8pt, top: 3pt, bottom: 4pt),
   radius: 2pt,
   width: 100%,
   breakable: false,
@@ -39,14 +39,14 @@
     column-gutter: 4pt,
     align: (left + top, center + horizon),
     text(weight: "bold")[#n.],
-    align(center)[#text(size: 11.5pt)[#eq]]
+    align(center)[#text(size: 10.5pt)[#eq]]
   )
-  #v(3pt)
-  #align(center)[#text(size: 9pt)[Résultat (bon nb de CS) :] #blanc(w: 3cm)]
+  #v(1pt)
+  #align(center)[#text(size: 8.5pt)[Résultat (bon nb de CS) :] #blanc(w: 2.7cm)]
 ]
 
 // Grille de 3 cases de calcul par ligne
-#let calcgrid(..boxes) = grid(columns: (1fr, 1fr, 1fr), column-gutter: 8pt, row-gutter: 8pt, ..boxes)
+#let calcgrid(..boxes) = grid(columns: (1fr, 1fr, 1fr), column-gutter: 8pt, row-gutter: 3pt, ..boxes)
 
 // Renvoi vers la page d'exercices dédiée (le contenu de l'exercice y est déporté)
 #let exlabel(n) = block(
@@ -72,67 +72,75 @@
 
 == Écritures des puissances de 10
 
-#définition[
-  Pour $n gt.eq 1$ : $10^n$ = 10 × 10 × ... × 10 ($n$ fois) : un 1 suivi de $n$ zéros. Cas particulier : $10^0 =$ #blanc(w: 1.2cm). #linebreak()
-  Pour $n gt.eq 1$ : $10^(-n) = 1/10^n$ = 0,00…01 (avec $n$ zéros en comptant celui devant la virgule).
-]
-
-#exemple[
-  $10^3 = 10 times 10 times 10 = 1 space 000$ #h(0.6cm) $10^5 =$ #blanc(w: 2cm) #linebreak()
-  $10^(-1) = 1/10 = 0,1$ #h(0.6cm) $10^(-2) = 1/100 =$ #blanc(w: 1.6cm)
-]
-
-#définition[
-  *Lien avec l'écriture décimale.* Multiplier par $10^n$ ($n>0$) → on déplace la virgule de $n$ rangs vers la *droite*. #linebreak()
-  Multiplier par $10^(-n)$ ($n>0$) → on déplace la virgule de $n$ rangs vers la *gauche*.
-]
-
-#exemple[
-  3,5 × $10^2$ = 350 (virgule déplacée de 2 rangs vers la droite) #linebreak()
-  8 × $10^(-3)$ = 0,008 (virgule déplacée de 3 rangs vers la #blanc(w: 2cm))
-]
+#grid(columns: (1fr, 1fr), column-gutter: 8pt,
+  [
+    #définition[
+      Pour $n gt.eq 1$ : $10^n$ = 10 × 10 × ... × 10 ($n$ fois) : un 1 suivi de $n$ zéros. Cas particulier : $10^0 =$ #blanc(w: 1.2cm).
+    ]
+    #exemple[
+      $10^3 = 1 space 000$ #h(0.4cm) $10^5 =$ #blanc(w: 1.6cm) #linebreak()
+      $10^(-1) = 0,1$ #h(0.4cm) $10^(-2) =$ #blanc(w: 1.3cm)
+    ]
+  ],
+  [
+    #définition[
+      *Lien avec l'écriture décimale.* Multiplier par $10^n$ ($n>0$) → virgule déplacée de $n$ rangs vers la *droite*. Multiplier par $10^(-n)$ → vers la *gauche*.
+    ]
+    #exemple[
+      3,5 × $10^2$ = 350 (2 rangs à droite) #linebreak()
+      8 × $10^(-3)$ = 0,008 (3 rangs vers la #blanc(w: 1.6cm))
+    ]
+  ]
+)
 
 #exlabel(1)
 
 == Écriture scientifique
 
-#définition[
-  Un nombre est en *écriture scientifique* s'il s'écrit $a times 10^n$, où : $a$ a un seul chiffre non nul avant la virgule (1 ⩽ $a$ < 10) et $n$ est un entier relatif.
-]
-
-#exemple[
-  #text(weight: "bold", fill: rgb("#166534"))[✓ Écriture scientifique :] 3,5 × $10^8$ ; 7,2 × $10^(-5)$ #linebreak()
-  #text(weight: "bold", fill: rgb("#991b1b"))[✗ Pas en écriture scientifique :] 35 × $10^7$ (il faut 3,5 × $10^8$)
-]
-
-#définition[
-  *Méthode.* 1. Déplacer la virgule pour avoir un seul chiffre non nul avant la virgule. #linebreak()
-  2. Compter le nombre de rangs déplacés → c'est $n$ (sans le signe). #linebreak()
-  3. Virgule déplacée vers la *gauche* → exposant #blanc(w: 2.4cm). #linebreak()
-  4. Virgule déplacée vers la *droite* → exposant #blanc(w: 2.4cm).
-]
-
-#exemple[
-  28 000 = 2,8 × $10^4$ (virgule déplacée de 4 rangs vers la gauche → +4)
-]
+#grid(columns: (1fr, 1fr), column-gutter: 8pt,
+  [
+    #définition[
+      Un nombre est en *écriture scientifique* s'il s'écrit $a times 10^n$, où : $a$ a un seul chiffre non nul avant la virgule (1 ⩽ $a$ < 10) et $n$ est un entier relatif.
+    ]
+    #exemple[
+      #text(weight: "bold", fill: rgb("#166534"))[✓] 3,5 × $10^8$ ; 7,2 × $10^(-5)$ #linebreak()
+      #text(weight: "bold", fill: rgb("#991b1b"))[✗] 35 × $10^7$ (il faut 3,5 × $10^8$)
+    ]
+  ],
+  [
+    #définition[
+      *Méthode.* 1. Déplacer la virgule pour un seul chiffre non nul avant. #linebreak()
+      2. Compter les rangs déplacés → c'est $n$. #linebreak()
+      3. Vers la *gauche* → exposant #blanc(w: 2.4cm). #linebreak()
+      4. Vers la *droite* → exposant #blanc(w: 2.4cm).
+    ]
+    #exemple[
+      28 000 = 2,8 × $10^4$ (4 rangs à gauche → +4)
+    ]
+  ]
+)
 
 #exlabel(2)
 
 == Opérations avec les puissances de 10
 
-#définition[
-  $10^a times 10^b = 10^(a+b)$ — on #blanc(w: 2.6cm) les exposants. #h(1fr) $10^a/10^b = 10^(a-b)$ — on *soustrait* les exposants.
-]
-#exemple[
-  $10^3 times 10^2 = 10^(3+2) = 10^5$ #h(0.6cm) $10^7/10^3 = 10^(7-3) = 10^4$
-]
+#grid(columns: (1fr, 1fr), column-gutter: 8pt,
+  définition[
+    $10^a times 10^b = 10^(a+b)$ — on #blanc(w: 2cm) les exposants. #linebreak() $10^a/10^b = 10^(a-b)$ — on *soustrait* les exposants.
+  ],
+  exemple[
+    $10^3 times 10^2 = 10^(3+2) = 10^5$ #linebreak() $10^7/10^3 = 10^(7-3) = 10^4$
+  ]
+)
 
-#définition[
-  $1/10^a = 10^(-a)$ — on *change le signe* de l'exposant. #h(1fr) $(10^a)^b = 10^(a times b)$ — on #blanc(w: 2.6cm) les exposants.
-]
-#exemple[
-  $1/10^3 = 10^(-3)$ #h(0.6cm) $(10^2)^3 = 10^(2 times 3) = 10^6$
-]
+#grid(columns: (1fr, 1fr), column-gutter: 8pt,
+  définition[
+    $1/10^a = 10^(-a)$ — on *change le signe* de l'exposant. #linebreak() $(10^a)^b = 10^(a times b)$ — on #blanc(w: 2cm) les exposants.
+  ],
+  exemple[
+    $1/10^3 = 10^(-3)$ #linebreak() $(10^2)^3 = 10^(2 times 3) = 10^6$
+  ]
+)
 
 #important[
   *Récapitulatif des règles.* Multiplication : $10^a times 10^b = 10^(a+b)$ #h(1fr) Division : $10^a/10^b = 10^(a-b)$ #linebreak()
@@ -143,46 +151,45 @@
 
 = Convertir les unités avec les préfixes
 
-#définition[
-  La méthode est toujours la même, quelle que soit la grandeur physique (longueur, masse, durée, tension, intensité, fréquence…) : un préfixe est un facteur multiplicatif exprimé en puissance de 10.
-]
+#grid(columns: (1.1fr, 1fr), column-gutter: 10pt,
+  [
+    #définition[
+      La méthode est toujours la même, quelle que soit la grandeur physique (longueur, masse, durée, tension, intensité, fréquence…) : un préfixe est un facteur multiplicatif exprimé en puissance de 10.
+    ]
+    #définition[
+      *Convertir vers l'unité de base.* On remplace le préfixe de l'unité source par sa valeur numérique (puissance de 10 correspondante), puis on multiplie.
+    ]
+  ],
+  align(center)[
+    #text(size: 9pt)[#table(
+      columns: 4,
+      stroke: 0.5pt + gray,
+      inset: 4.5pt,
+      align: center + horizon,
+      table.header([*Symbole*], [*Nom*], [*Puiss. 10*], [*Valeur*]),
+      [G], [giga], [$10^9$], [1 000 000 000],
+      [M], [méga], [$10^6$], [1 000 000],
+      [k], [kilo], [$10^3$], [1 000],
+      [—], [(base)], [$10^0 = 1$], [1],
+      [d], [déci], [$10^(-1)$], [0,1],
+      [c], [centi], [$10^(-2)$], [0,01],
+      [m], [milli], [$10^(-3)$], [0,001],
+      [µ], [micro], [$10^(-6)$], [0,000 001],
+      [n], [nano], [$10^(-9)$], [0,000 000 001],
+    )]
+  ]
+)
 
-#align(center)[
-  #table(
-    columns: 4,
-    stroke: 0.5pt + gray,
-    inset: 6pt,
-    align: center + horizon,
-    table.header([*Symbole*], [*Nom*], [*Puissance de 10*], [*Valeur décimale*]),
-    [G], [giga], [$10^9$], [1 000 000 000],
-    [M], [méga], [$10^6$], [1 000 000],
-    [k], [kilo], [$10^3$], [1 000],
-    [—], [(base)], [$10^0 = 1$], [1],
-    [d], [déci], [$10^(-1)$], [0,1],
-    [c], [centi], [$10^(-2)$], [0,01],
-    [m], [milli], [$10^(-3)$], [0,001],
-    [µ], [micro], [$10^(-6)$], [0,000 001],
-    [n], [nano], [$10^(-9)$], [0,000 000 001],
-  )
-]
-
-#v(6pt)
-
-#définition[
-  *Convertir vers l'unité de base.* On remplace le préfixe de l'unité source par sa valeur numérique (puissance de 10 correspondante), puis on multiplie.
-]
-
-#exemple[
-  *Exemple 1 — Longueur.* Convertir 3 cm en m. #linebreak()
-  1. Préfixe : *c* (centi) = $10^(-2)$ #linebreak()
-  2. 3 cm = 3 × $10^(-2)$ m
-]
-
-#exemple[
-  *Exemple 2 — Intensité (autre grandeur, même méthode).* Convertir 470 µA en A. #linebreak()
-  1. Préfixe : *µ* (micro) = $10^(-6)$ #linebreak()
-  2. 470 µA = 470 × $10^(-6)$ A = #blanc(w: 2.6cm)
-]
+#grid(columns: (1fr, 1fr), column-gutter: 8pt,
+  exemple[
+    *Ex. 1 — Longueur.* Convertir 3 cm en m. #linebreak()
+    Préfixe : *c* (centi) = $10^(-2)$ → 3 cm = 3 × $10^(-2)$ m
+  ],
+  exemple[
+    *Ex. 2 — Intensité.* Convertir 470 µA en A. #linebreak()
+    Préfixe : *µ* (micro) = $10^(-6)$ → 470 µA = 470 × $10^(-6)$ A = #blanc(w: 2.6cm)
+  ]
+)
 
 #important[
   *À retenir.* On ne convertit ici que *vers l'unité de base* (m, s, A, V, J, Hz, g…). Pour passer d'un préfixe à un autre, on repassera toujours par l'unité de base comme étape intermédiaire.
@@ -190,11 +197,9 @@
 
 #exlabel(4)
 
-#pagebreak()
-
 #align(center)[* Exercices — Puissances de 10 et conversions*]
 
-#exercice[
+#block(breakable: false)[#exercice[
   *Écritures des puissances de 10*
 
   #side-by-side(
@@ -209,9 +214,9 @@
       (6, [Combien vaut $10^0$ ?], [#qcm-opt("a", "10") #h(0.2cm) #qcm-opt("b", "0") #linebreak() #qcm-opt("c", "1") #h(0.2cm) #qcm-opt("d", "100")]),
     )),
   )
-]
+]]
 
-#exercice[
+#block(breakable: false)[#exercice[
   *Écriture scientifique*
 
   #side-by-side(
@@ -226,9 +231,9 @@
       (6, [Laquelle de ces écritures est scientifique ?], [#qcm-opt("a", [45×$10^3$]) #linebreak() #qcm-opt("b", [4,5×$10^4$]) #linebreak() #qcm-opt("c", [0,45×$10^5$]) #linebreak() #qcm-opt("d", [450×$10^2$])]),
     )),
   )
-]
+]]
 
-#exercice[
+#block(breakable: false)[#exercice[
   *Opérations avec les puissances de 10*
 
   #side-by-side(
@@ -243,9 +248,9 @@
       (6, [Que vaut $10^7/10^3$ ?], [#qcm-opt("a", [$10^10$]) #linebreak() #qcm-opt("b", [$10^2$]) #linebreak() #qcm-opt("c", [4]) #linebreak() #qcm-opt("d", [$10^4$])]),
     )),
   )
-]
+]]
 
-#exercice[
+#block(breakable: false)[#exercice[
   *Convertir vers l'unité de base*
 
   #side-by-side(
@@ -264,9 +269,7 @@
       (10, [Convertir 0,8 ms en s], [#blanc(w: 2.4cm)]),
     )),
   )
-]
-
-#pagebreak()
+]]
 
 = Chiffres significatifs et présentation d'un résultat
 
@@ -276,17 +279,19 @@
   Les *chiffres significatifs* (CS) d'une mesure sont les chiffres qui portent une information fiable sur sa valeur (lus sur l'instrument ou donnés dans l'énoncé). Plus il y a de CS, plus la mesure est précise.
 ]
 
-#définition[
-  *Règles de comptage.* Tous les chiffres non nuls sont significatifs. #linebreak()
-  • Un zéro *encadré* par des chiffres non nuls est significatif (205 → 3 CS). #linebreak()
-  • Un zéro *à gauche* (avant le premier chiffre non nul) n'est *jamais* #blanc(w: 2.6cm) (0,0025 → 2 CS). #linebreak()
-  • Un zéro *à droite après la virgule* est significatif (2,50 → 3 CS). #linebreak()
-  • En écriture scientifique $a times 10^n$, le nombre de CS = nombre de chiffres de $a$ (2,50 × $10^3$ → 3 CS).
-]
+#grid(columns: (1.3fr, 1fr), column-gutter: 8pt,
+  définition[
+    *Règles de comptage.* Tous les chiffres non nuls sont significatifs. #linebreak()
+    • Un zéro *encadré* est significatif (205 → 3 CS). #linebreak()
+    • Un zéro *à gauche* n'est *jamais* #blanc(w: 2.6cm) (0,0025 → 2 CS). #linebreak()
+    • Un zéro *à droite après la virgule* est significatif (2,50 → 3 CS). #linebreak()
+    • En écriture scientifique $a times 10^n$, CS = chiffres de $a$ (2,50 × $10^3$ → 3 CS).
+  ],
+  exemple[
+    205 → 3 CS #linebreak() 0,0025 → 2 CS #linebreak() 2,50 → 3 CS #linebreak() 3,2 × $10^3$ → 2 CS #linebreak() 7,00 × $10^(-3)$ → 3 CS
+  ]
+)
 
-#exemple[
-  205 → 3 CS #h(0.4cm) 0,0025 → 2 CS #h(0.4cm) 2,50 → 3 CS #h(0.4cm) 3,2 × $10^3$ → 2 CS #h(0.4cm) 7,00 × $10^(-3)$ → 3 CS
-]
 #exercice[
 #side-by-side(
   extable((
@@ -329,12 +334,11 @@
   #qcm-opt("c", [24 × $10^(-5)$]) #h(0.3cm) #qcm-opt("d", [2,4 − 05])
 ]
 
-#v(3pt)
+#v(1pt)
 #text(weight: "bold", size: 10pt)[Exercices — entraînement calculatrice]
-#v(2pt)
 
 _Effectue chaque calcul à la calculatrice (utilise la touche $times 10^x$ quand il le faut), puis recopie le résultat avec le bon nombre de CS._
-#v(4pt)
+#v(1pt)
 
 #calcgrid(
   calcbox(1, $3,0 times 10^2 times 2,5 times 10^(-3)$),
@@ -345,12 +349,11 @@ _Effectue chaque calcul à la calculatrice (utilise la touche $times 10^x$ quand
   calcbox(6, $9,81 times 2,0 times 10^1$),
 )
 
-#v(8pt)
-#text(weight: "bold", size: 9.5pt, fill: rgb("#991b1b"))[Plus difficile — pense aux parenthèses (priorité des opérations)]
 #v(2pt)
+#text(weight: "bold", size: 9.5pt, fill: rgb("#991b1b"))[Plus difficile — pense aux parenthèses (priorité des opérations)]
 
 _Sur la calculatrice, un numérateur ou un dénominateur qui contient une somme ou une différence doit être saisi entre parenthèses, sinon le résultat est faux._
-#v(4pt)
+#v(1pt)
 
 #calcgrid(
   calcbox(7, $(5,2 times 10^2 + 3,8 times 10^2) / (2,0 times 10^1)$),
@@ -358,40 +361,8 @@ _Sur la calculatrice, un numérateur ou un dénominateur qui contient une somme 
   calcbox(9, $(6,4 times 10^(-3) - 1,4 times 10^(-3)) / (2,5 times 10^(-1))$),
 )
 
+#v(2pt)
 
-
-#align(center)[
-  #text(size: 15pt, weight: "bold", fill: rgb("#5448c8"))[À la maison]
-]
-
-#v(10pt)
-
-#block(
-  fill: rgb("#eef1ff"), stroke: 0.6pt + rgb("#c4b5fd"), inset: 16pt, radius: 4pt, width: 100%,
-)[
-  #grid(
-    columns: (3.4cm, 1fr),
-    column-gutter: 20pt,
-    align: (center + horizon, left + horizon),
-    image("../figures/qr_portail_apps.png", width: 3.2cm),
-    [
-      #text(weight: "bold", size: 11pt)[Révise et entraîne-toi chez toi]
-      #v(4pt)
-      Retrouve sur le portail les applications numériques faites pour la classe : méthodes expliquées pas à pas et exercices auto-corrigés, à ton rythme.
-      #v(6pt)
-      #text(weight: "bold", size: 10.5pt)[https://deniscyril.github.io/physiquechimie/]
-      #v(4pt)
-      #text(size: 9pt, style: "italic")[Scanne le QR code avec ton téléphone, ou tape l'adresse dans un navigateur.]
-    ]
-  )
-]
-
-#v(14pt)
-
-#travail[
-  *Avant de partir, vérifie que tu sais…* #linebreak()
-  • Écrire un nombre en écriture scientifique et repasser à l'écriture décimale. #linebreak()
-  • Additionner / soustraire les exposants lors d'une multiplication ou d'une division de puissances de 10. #linebreak()
-  • Convertir une grandeur physique vers son unité de base. #linebreak()
-  • Compter les chiffres significatifs d'une mesure et arrondir correctement le résultat d'un calcul.
-]
+#block(breakable: false)[#travail[
+  *Avant de partir, vérifie que tu sais…* Écrire un nombre en écriture scientifique et repasser à l'écriture décimale ; additionner/soustraire les exposants (mult./div. de puissances de 10) ; convertir une grandeur physique vers son unité de base ; compter les CS d'une mesure et arrondir correctement un résultat.
+]]
