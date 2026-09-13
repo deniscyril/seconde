@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 // On applique le template à tout le document
 #show: conf
@@ -28,30 +28,30 @@
   inset: 10pt,
 
   // --- LIGNE 1 ---
-  image("figures/atelier1.jpeg", width: 80%), 
+  image("../figures/atelier1.jpeg", width: 80%), 
   [Système: la goutte.],
 
   // --- LIGNE 2 ---
-  image("figures/atelier2.jpeg", width: 80%), 
+  image("../figures/atelier2.jpeg", width: 80%), 
   [Système: La brique posée sur la planche ],
 
   // --- LIGNE 3 ---
- image("figures/atelier3.jpeg", width: 90%), 
+ image("../figures/atelier3.jpeg", width: 90%), 
   [Système: l'aiguille aimantée d'une boussole],
   // --- LIGNE 4 ---
- image("figures/atelier4.jpeg", width: 80%), 
+ image("../figures/atelier4.jpeg", width: 80%), 
   [Système: le clou en fer],
 
   // --- LIGNE 5 ---
- image("figures/atelier5.jpeg", width: 60%), 
+ image("../figures/atelier5.jpeg", width: 60%), 
   [Système: La masse accrochée au ressort],
 
   // --- LIGNE 6 ---
- image("figures/atelier6.jpeg", width: 80%), 
+ image("../figures/atelier6.jpeg", width: 80%), 
   [Système: la boule d'aluminium accrochée à la ficelle],
- image("figures/atelier7.jpeg", width: 60%), 
+ image("../figures/atelier7.jpeg", width: 60%), 
   [Système: Le bouchon qui flotte],
-   image("figures/atelier5.jpeg", width: 60%), 
+   image("../figures/atelier5.jpeg", width: 60%), 
   [Système: Le *RESSORT*],
 )
 

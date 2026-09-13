@@ -1,4 +1,4 @@
-#import "../_assets/template_evaluation.typ": *
+#import "../../_assets/template_evaluation.typ": *
 
 // On applique le template à tout le document
 #show: conf

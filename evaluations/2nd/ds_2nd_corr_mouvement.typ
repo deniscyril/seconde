@@ -1,4 +1,4 @@
-#import "../_assets/template_evaluation.typ": *
+#import "../../_assets/template_evaluation.typ": *
 #import "@preview/cetz:0.3.2": canvas, draw
 #show: conf
 

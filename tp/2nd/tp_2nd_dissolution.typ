@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 // On applique le template à tout le document
 #show: conf

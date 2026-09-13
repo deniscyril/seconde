@@ -1,6 +1,6 @@
 //#import "@preview/unify:0.7.1": num, unit, qty
 #import "@preview/cetz:0.3.2": canvas, draw
-#import "../_assets/template_evaluation.typ": *
+#import "../../_assets/template_evaluation.typ": *
 
 #show: conf
 
@@ -54,7 +54,7 @@ sur la Lune avec son Album :
 
 // ── Bande dessinée ───────────────────────────────────────────
 #align(center)[
-  #image("figures/tintin.jpg", width: 100%)
+  #image("../figures/tintin.jpg", width: 100%)
 ]
 
 #v(0.8em)
@@ -82,7 +82,7 @@ sur la Lune avec son Album :
 
 #exercice(points: "2")[
 #figure(grid(columns: (6cm,1fr),align: (top,left) ,
-[#image("figures/croix_fer.png",width:5cm)],
+[#image("../figures/croix_fer.png",width:5cm)],
 [ Un gymnaste se tient immobile en se tenant à 2 anneaux. Le système étudié est le gymnaste, le référentiel est la salle de sport. 
 + Faire un Diagramme objets interactions (chaque anneau est un objet).
 + Schématiser la situation en représentant les vecteurs forces qui agissent sur le système. ]  

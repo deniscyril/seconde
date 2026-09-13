@@ -1,4 +1,4 @@
-#import "../_assets/template_evaluation.typ": *
+#import "../../_assets/template_evaluation.typ": *
 
 #show: conf
 

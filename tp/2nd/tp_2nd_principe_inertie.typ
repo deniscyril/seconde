@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 // On applique le template à tout le document
 #show: conf
@@ -161,5 +161,5 @@
 + Même question que précédement en ce qui concerne la phase de lancé.
 
 #align(center)[
-  #image("figures/exos_principe_inertie.png", width: 115%)
+  #image("../figures/exos_principe_inertie.png", width: 115%)
 ]

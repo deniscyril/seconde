@@ -1,4 +1,4 @@
-#import "../_assets/template_physique.typ": *
+#import "../../_assets/template_physique.typ": *
 
 // On applique le template à tout le document
 #show: conf
@@ -185,7 +185,7 @@
     #v(0.4em)
     #bordered-box[
       #align(center)[
-        #image("figures/terre.jpg", width: 7cm)
+        #image("../figures/terre.jpg", width: 7cm)
       ]
 
       #v(0.5em)
@@ -268,7 +268,7 @@ La sonde InSight a atterri sur Mars en novembre 2018.
      ],
      // Image de la sonde
      [
-       #image("figures/insight.jpg", width: 4.5cm)
+       #image("../figures/insight.jpg", width: 4.5cm)
       //  #align(center)[
       //    #text(size: 8pt, style: "italic")[
       //      Déploiement d'InSight avec le sismomètre SEIS\
@@ -305,7 +305,7 @@ sur la Lune avec son Album :
 
 // ── Bande dessinée ───────────────────────────────────────────
 #align(center)[
-  #image("figures/tintin.jpg", width: 100%)
+  #image("../figures/tintin.jpg", width: 100%)
 ]
 
 #v(0.8em)
