@@ -1,22 +1,16 @@
 #import "template_base.typ": *
 
-// --- BLOCS SPÉCIFIQUES AUX COURS ---
-#let définition  = mbox.with("Définition",      emoji.heart,    c-accent)
-#let exemple     = mbox.with("Exemple",         emoji.bubble,   c-success)
-#let travail     = mbox.with("Travail à faire", emoji.pencil,   c-bg-gray)
-#let important   = mbox.with("Important",       emoji.excl,     rgb("#d35400"))
-#let application = mbox.with("Application",     emoji.wrench,   c-primary)
-#let experience  = mbox.with("Expérience",      emoji.testtube, rgb("#ec98b3"))
-
-// --- EXERCICES ---
+// --- EXERCICES (numérotation en continu ; blocs définition/exemple/travail/important/
+// application/expérience proviennent désormais tous de template_base.typ) ---
 #let exercice-compteur = counter("exercise")
 #let exercice(body) = {
   exercice-compteur.step()
   mbox(
     context [Exercice #exercice-compteur.display()],
-    emoji.basketball,
-    rgb("#8e44ad"),
-    body
+    none,
+    c-exercice,
+    body,
+    bg: bg-exercice
   )
 }
 

@@ -1,0 +1,121 @@
+#import "../../_assets/template_physique.typ": *
+
+// On applique le template à tout le document
+#show: conf
+#chapitre[Corrigé — Quantités de matière, tableau d'avancement et dilution - Terminale]
+
+= Partie 1 — Quantités de matière
+
+== Exercice 1 — Applications directes
+
+*1.* $n = m/M = 11,7/58,5 = 0,200$ mol.
+
+*2.* $n = C times V = 0,20 times 0,250 = 0,050$ mol.
+
+*3.* $n = V/V_m = 2,4/24 = 0,10$ mol.
+
+*4.* $N = n times N_A = 0,50 times 6,02 times 10^23 = 3,01 times 10^23$ entités.
+
+== Exercice 2 — Sérum physiologique
+
+*1.* $V = 500$ mL $= 0,500$ L. (La masse du patient, 68 kg, n'intervient pas dans le calcul.)
+
+*2.* $m = c_m times V = 9,0 times 0,500 = 4,5$ g.
+
+*3.* $n = m/M = 4,5/58,5 = 7,7 times 10^(-2)$ mol. Concentration molaire : $C = n/V = 0,077/0,500 = 0,15$ $"mol" dot.op "L"^(-1)$.
+
+*4.* La dissolution est totale et 1 mol de $"NaCl"$ libère 1 mol de $"Na"^+$, donc $n("Na"^+) = n("NaCl") = 7,7 times 10^(-2)$ mol.
+
+== Exercice 3 — Acidité d'un vinaigre
+
+*1.* $M("CH"_3"COOH") = 2 times 12,0 + 4 times 1,00 + 2 times 16,0 = 60,0$ $"g" dot.op "mol"^(-1)$.
+
+*2.* $m_"vinaigre" = rho times V = 1,01 times 750 = 757,5$ g. (Le prix de la bouteille, 2,50 €, est une donnée non pertinente pour le calcul.)
+
+*3.* $m_"acide" = 757,5 times 6,0/100 = 45,5$ g.
+
+*4.* $n = m/M = 45,5/60,0 = 0,76$ mol.
+
+*5.* $C = n/V = 0,76/0,750 = 1,0$ $"mol" dot.op "L"^(-1)$.
+
+#pagebreak()
+
+= Partie 2 — Tableau d'avancement
+
+== Exercice 4 — Combustion du méthane
+
+*1.* Tableau d'avancement (en mol) :
+
+#table(
+  columns: 5,
+  [], [$"CH"_4$], [$2 "O"_2$], [$"CO"_2$], [$2 "H"_2"O"$],
+  [État initial ($x=0$)], [$0,20$], [$0,50$], [$0$], [$0$],
+  [En cours ($x$)], [$0,20 - x$], [$0,50 - 2x$], [$x$], [$2x$],
+  [État final ($x_"max"$)], [$0,20 - x_"max"$], [$0,50 - 2 x_"max"$], [$x_"max"$], [$2 x_"max"$],
+)
+
+*2.* Si $"CH"_4$ était limitant : $x_"max" = 0,20/1 = 0,20$ mol. Si $"O"_2$ était limitant : $x_"max" = 0,50/2 = 0,25$ mol. Le plus petit des deux impose la limite : $x_"max" = 0,20$ mol, le réactif limitant est le méthane $"CH"_4$.
+
+*3.* État final : $n("CH"_4) = 0$ mol ; $n("O"_2) = 0,50 - 2 times 0,20 = 0,10$ mol (en excès) ; $n("CO"_2) = 0,20$ mol ; $n("H"_2"O") = 2 times 0,20 = 0,40$ mol.
+
+== Exercice 5 — Détartrage d'une bouilloire
+
+*1.* $n("CaCO"_3) = m/M = 5,0/100 = 0,050$ mol.
+
+*2.* $V = 250$ mL $= 0,250$ L. $n("H"_3"O"^+) = ["H"_3"O"^+] times V = 0,83 times 0,250 = 0,21$ mol.
+
+*3.* Tableau d'avancement (en mol) :
+
+#table(
+  columns: 5,
+  [], [$"CaCO"_3$], [$2 "H"_3"O"^+$], [$"Ca"^(2+)$], [$"CO"_2$],
+  [État initial], [$0,050$], [$0,21$], [$0$], [$0$],
+  [En cours], [$0,050 - x$], [$0,21 - 2x$], [$x$], [$x$],
+  [État final], [$0,050 - x_"max"$], [$0,21 - 2 x_"max"$], [$x_"max"$], [$x_"max"$],
+)
+
+Si $"CaCO"_3$ limitant : $x_"max" = 0,050$ mol. Si $"H"_3"O"^+$ limitant : $x_"max" = 0,21/2 = 0,105$ mol. Le réactif limitant est le carbonate de calcium $"CaCO"_3$, avec $x_"max" = 0,050$ mol.
+
+*4.* Le tartre ($"CaCO"_3$) est le réactif limitant : sa quantité de matière à l'état final est nulle ($0,050 - 0,050 = 0$). Le tartre disparaît donc totalement, l'acide restant en excès (durée de l'opération, 30 min, non pertinente pour ce calcul).
+
+== Exercice 6 — Dosage des ions chlorure par précipitation
+
+*1.* Facteur de dilution : $F = V_"fille"/V_"mère" = 200/20,0 = 10$. Concentration diluée : $c = c_"mère"/F = 0,50/10 = 0,050$ $"mol" dot.op "L"^(-1)$. (La température, 20 °C, est une donnée non pertinente.)
+
+*2.* $n("Ag"^+) = c times V_"fille" = 0,050 times 0,200 = 1,0 times 10^(-2)$ mol.
+
+*3.* Tableau d'avancement (en mol) :
+
+#table(
+  columns: 4,
+  [], [$"Ag"^+$], [$"Cl"^-$], [$"AgCl"$],
+  [État initial], [$1,0 times 10^(-2)$], [$8,0 times 10^(-3)$], [$0$],
+  [En cours], [$1,0 times 10^(-2) - x$], [$8,0 times 10^(-3) - x$], [$x$],
+  [État final], [$1,0 times 10^(-2) - x_"max"$], [$8,0 times 10^(-3) - x_"max"$], [$x_"max"$],
+)
+
+*4.* $x_"max"("Ag"^+) = 1,0 times 10^(-2)$ mol ; $x_"max"("Cl"^-) = 8,0 times 10^(-3)$ mol. Le réactif limitant est $"Cl"^-$, avec $x_"max" = 8,0 times 10^(-3)$ mol. Masse de précipité : $m = x_"max" times M("AgCl") = 8,0 times 10^(-3) times 143,5 = 1,1$ g.
+
+#pagebreak()
+
+= Partie 3 — Dilution
+
+== Exercice 7 — Préparation d'une solution diluée
+
+*1.* $F = C_"mère"/C = 0,50/0,020 = 25$.
+
+*2.* $V_"mère" = V/F = 100/25 = 4,0$ mL.
+
+*3.* Une pipette jaugée (avec propipette) de 4,0 mL (ou une pipette graduée adaptée) pour le prélèvement, et une fiole jaugée de 100 mL pour compléter jusqu'au trait de jauge avec de l'eau distillée.
+
+== Exercice 8 — Dilutions successives d'une eau usée
+
+*1.* $F = V_"fiole"/V_"prélevé" = 100/5,00 = 20$.
+
+*2.* $c_1 = c_0/F = 0,120/20 = 6,0 times 10^(-3)$ $"mol" dot.op "L"^(-1)$.
+
+*3.* La seconde dilution utilise le même facteur $F = 20$ : $c_2 = c_1/F = 6,0 times 10^(-3)/20 = 3,0 times 10^(-4)$ $"mol" dot.op "L"^(-1)$.
+
+*4.* $c_2 = 3,0 times 10^(-4)$ $"mol" dot.op "L"^(-1)$ est bien inférieure à $2,0 times 10^(-3)$ $"mol" dot.op "L"^(-1)$ : la solution finale est compatible avec les exigences du spectrophotomètre.
+
+*5.* Piège à ne pas manquer : seule la *première* dilution prélève de l'eau usée initiale (5,00 mL). La seconde dilution prélève 5,00 mL de la solution déjà diluée (issue de la première fiole), et non de l'eau usée d'origine. Le volume total d'eau usée initiale utilisé est donc uniquement $V = 5,00$ mL, et non $10,0$ mL.

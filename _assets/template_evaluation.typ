@@ -54,7 +54,8 @@
   )
 }
 
-// --- EXERCICES (avec points optionnels) ---
+// --- EXERCICES (avec points optionnels ; même palette que template_physique.typ,
+// via les constantes de template_base.typ — plus de couleur dupliquée à maintenir) ---
 #let exercice-compteur = counter("exercise")
 
 #let exercice(points: none, body) = {
@@ -62,7 +63,7 @@
   context {
     let titre = "Exercice " + exercice-compteur.display()
     if points != none { titre += " (" + points + " pts)" }
-    mbox(titre, "📋", rgb("#8e44ad"), body)
+    mbox(titre, none, c-exercice, body, bg: bg-exercice)
   }
 }
 
