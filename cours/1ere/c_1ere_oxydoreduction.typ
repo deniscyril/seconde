@@ -82,7 +82,7 @@
   + $"Ag"^+\/"Ag"$
   + $"Cu"^(2+)\/"Cu"$
   + $"I"_2\/"I"^-$
-  + $"H"_3"O"^+\/"H"_2$
+  + $"H"^+\/"H"_2$
   + $"Fe"^(3+)\/"Fe"^(2+)$
 
   *Correction :*
@@ -90,7 +90,7 @@
   + $"Ag"^+ + e^- = "Ag"$
   + $"Cu"^(2+) + 2 e^- = "Cu"$
   + $"I"_2 + 2 e^- = 2 "I"^-$
-  + $2 "H"_3"O"^+ + 2 e^- = "H"_2 + 2 "H"_2"O"$
+  + $2 "H"^+ + 2 e^- = "H"_2$
   + $"Fe"^(3+) + e^- = "Fe"^(2+)$
 ]
 
@@ -236,12 +236,12 @@
 #exercice[
   *Le zinc dans l'acide chlorhydrique* #h(1fr) _Tout ensemble !_
 
-  On introduit $m = 0","65$ g de grenaille de zinc Zn dans $V = 50","0$ mL d'acide chlorhydrique ($"H"_3"O"^+$) de concentration $C = 1","0$ mol·L⁻¹. Un gaz se dégage ; on le recueille par déplacement d'eau. Quand tout le zinc a disparu, on a recueilli $V_"gaz" = 0","24$ L de gaz.
+  On introduit $m = 0","65$ g de grenaille de zinc Zn dans $V = 50","0$ mL d'acide chlorhydrique ($"H"^+ + "Cl"^-$) de concentration $C = 1","0$ mol·L⁻¹. Un gaz se dégage ; on le recueille par déplacement d'eau. Quand tout le zinc a disparu, on a recueilli $V_"gaz" = 0","24$ L de gaz.
 
-  Couples : $"Zn"^(2+)\/"Zn"$ et $"H"_3"O"^+\/"H"_2$. #h(1em) *Données :* $M_"Zn" = 65","4$ g·mol⁻¹ ; $V_m = 24$ L·mol⁻¹.
+  Couples : $"Zn"^(2+)\/"Zn"$ et $"H"^+\/"H"_2$. #h(1em) *Données :* $M_"Zn" = 65","4$ g·mol⁻¹ ; $V_m = 24$ L·mol⁻¹.
 
   + Établir l'équation bilan. Quel est le gaz recueilli ?
-  + Calculer les quantités de matière initiales de zinc $n_"Zn"$ et d'ions oxonium $n_("H"_3"O"^+)$.
+  + Calculer les quantités de matière initiales de zinc $n_"Zn"$ et d'ions hydrogène $n_("H"^+)$.
   + Calculer la quantité de matière de gaz formé.
   + Comparer la quantité de gaz formé à la quantité de zinc consommé. Ce résultat est-il cohérent avec les nombres stœchiométriques de l'équation ?
 ]
