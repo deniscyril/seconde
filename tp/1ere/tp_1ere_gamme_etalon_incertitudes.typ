@@ -48,20 +48,20 @@ Une fois les absorbances mesurées (partie III), chaque binôme reporte ses 2 va
 
 *Protocole* : rincer chaque fiole à l'eau distillée et chaque pipette avec la solution qu'elle prélève ; prélever $V_i$ de $C_0$, compléter à 50 mL avec de l'eau distillée, boucher et homogénéiser.
 
-= Choix de la longueur d'onde de travail
+// = Choix de la longueur d'onde de travail
 
-#experience[
-  Faire le blanc (avec de l'eau distillée) puis mesurer l'absorbance de $S_4$  tous les 25 nm entre 400 et 700 nm. Tracer $A = f(lambda)$ et relever $lambda_"max"$, longueur d'onde utilisée pour la suite du TP.
-]
+// #experience[
+//   Faire le blanc (avec de l'eau distillée) puis mesurer l'absorbance de $S_4$  tous les 25 nm entre 400 et 700 nm. Tracer $A = f(lambda)$ et relever $lambda_"max"$, longueur d'onde utilisée pour la suite du TP.
+// ]
 
-$lambda_"max" =$ .......... nm
+// $lambda_"max" =$ .......... nm
 
-#pagebreak()
+// #pagebreak()
 = Droite d'étalonnage
 
 #experience[
-  - Étalonner le spectrophotomètre à $lambda_"max"$ avec le blanc. 
-  - Mesurer l'absorbance de vos deux solutions ($S_4$ et celle qui vous est attribuée), puis de la solution inconnue $C_x$ (rincer la cuve avec la solution avant chaque mesure). 
+  - Étalonner le spectrophotomètre à $lambda_"max"$=525 nm avec le blanc. 
+  - Mesurer l'absorbance des solutions (commencer par $S_4$ et celle qui vous est attribuée), puis de la solution inconnue $C_x$ (rincer la cuve avec la solution avant chaque mesure). 
   - Reporter vos valeurs sur le tableau commun de la colonne.
 ]
 
@@ -74,6 +74,7 @@ $lambda_"max" =$ .......... nm
   [$k_i = A \/ C$ (L·mol⁻¹)], [], [], [], [], [], [—],
 )
 
+#pagebreak()
 #travail[
   + Calculer, pour chaque solution de la gamme, le rapport $k_i = A \/ C$ et compléter la dernière ligne du tableau.
   + Calculer la moyenne des valeurs de k notée $k_("moy")$
@@ -84,7 +85,7 @@ $lambda_"max" =$ .......... nm
 
 = Incertitude sur la concentration inconnue (évaluation de type A)
 
-- Chaque binôme calcule sa propre valeur de $C_x = A_x \/ k_("moy")$ (partie III), à partir de sa mesure d'absorbance. 
+- Chaque binôme calcule sa propre valeur de $C_x = A_x \/ k_("moy")$, à partir de sa mesure d'absorbance. 
 - Chaque binôme mutualise au tableau sa valeur de $C_x$.
 
 #travail[

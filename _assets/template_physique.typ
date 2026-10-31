@@ -14,6 +14,17 @@
   )
 }
 
+// --- QUESTIONS NUMÉROTÉES EN CONTINU (dans les blocs #travail, à travers tout le document) ---
+#let question-compteur = counter("question")
+#let Q(body) = {
+  question-compteur.step()
+  grid(
+    columns: (1.4em, 1fr),
+    column-gutter: 0.3em,
+    context [*#question-compteur.display().*], body,
+  )
+}
+
 // --- EN-TÊTE DE CHAPITRE ---
 #let chapitre(titre) = {
   pagebreak(weak: true)

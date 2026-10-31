@@ -148,12 +148,13 @@
       stroke: (x, y) => if y == 0 { (bottom: 1pt) } else { none },
       inset: (x: 0.5em, y: 0.4em),
       [*Notion*], [*À retenir*], [*Exos*],
-      [Oxydant], [Espèce qui *gagne* des $e^-$], [1, 2],
-      [Réducteur], [Espèce qui *perd* des $e^-$], [1, 2],
+      [Oxydant], [Espèce qui *gagne* des $e^-$], [1, 4],
+      [Réducteur], [Espèce qui *perd* des $e^-$], [1, 4],
       [Couple Ox/Red], [$"Ox" + n e^- = "Red"$], [2, 3],
-      [Demi-équation (sans O, H)], [Équilibrer atomes puis charges avec $e^-$], [2, 3],
-      [Demi-équation (avec O, H)], [O→$"H"_2"O"$ ; H→$"H"^+$ ; charges→$e^-$], [3, 4],
-      [Équation bilan], [Égaliser les $e^-$, additionner, simplifier], [4, 5, 6, 7],
+      [Demi-équation (sans O, H)], [Équilibrer atomes puis charges avec $e^-$], [2],
+      [Demi-équation (avec O, H)], [O→$"H"_2"O"$ ; H→$"H"^+$ ; charges→$e^-$], [3, 6],
+      [Équation bilan], [Égaliser les $e^-$, additionner, simplifier], [1, 4 à 7],
+      [_Rappel :_ quantité de matière], [$n = m \/ M$ ; $n = C times V$ ; $n = V_"gaz" \/ V_m$], [5, 6, 7],
     )
   ]
 ]
@@ -178,12 +179,8 @@
 
   Écrire les demi-équations électroniques des couples suivants (pas d'oxygène à équilibrer) :
 
-  + $"Ag"^+\/"Ag"$
-  + $"Zn"^(2+)\/"Zn"$
-  + $"Fe"^(3+)\/"Fe"^(2+)$
-  + $"I"_2\/"I"^-$
-  + $"Br"_2\/"Br"^-$
-  + $"Sn"^(4+)\/"Sn"^(2+)$
+  #grid(columns: (1fr,)*4,
+    [1. $"Zn"^(2+)\/"Zn"$], [2. $"I"_2\/"I"^-$], [3. $"Br"_2\/"Br"^-$], [4. $"Sn"^(4+)\/"Sn"^(2+)$])
 ]
 
 #exercice[
@@ -200,66 +197,51 @@
 #exercice[
   *Équations bilan — réactions directes*
 
-  Établir l'équation bilan de chaque réaction. Les couples sont donnés.
+  Établir l'équation bilan de chaque réaction et identifier l'oxydant et le réducteur.
 
-  + Réaction entre Fe et $"Cu"^(2+)$. Couples : $"Cu"^(2+)\/"Cu"$ et $"Fe"^(2+)\/"Fe"$.
-  + Réaction entre Zn et $"H"_3"O"^+$. Couples : $"Zn"^(2+)\/"Zn"$ et $"H"_3"O"^+\/"H"_2$.
-  + Réaction entre $"I"_2$ et $"Fe"^(2+)$. Couples : $"I"_2\/"I"^-$ et $"Fe"^(3+)\/"Fe"^(2+)$.
+  + On mélange des ions $"Fe"^(3+)$ (jaune-brun) et des ions iodure $"I"^-$ (incolores) : la solution devient brune (formation de diiode $"I"_2$). Couples : $"Fe"^(3+)\/"Fe"^(2+)$ et $"I"_2\/"I"^-$.
+  + De l'aluminium Al réagit avec des ions $"Cu"^(2+)$. Couples : $"Al"^(3+)\/"Al"$ et $"Cu"^(2+)\/"Cu"$.
+  + Les ions dichromate $"Cr"_2"O"_7^(2-)$ réagissent avec les ions $"Fe"^(2+)$ en milieu acide. Couples : $"Cr"_2"O"_7^(2-)\/"Cr"^(3+)$ (voir exercice 3) et $"Fe"^(3+)\/"Fe"^(2+)$.
 ]
 
 #exercice[
-  *La corrosion du fer*
+  *La corrosion du fer* #h(1fr) _Rappel : $n = m \/ M$ et $n = V_"gaz" \/ V_m$_
 
-  Le fer Fe se corrode en présence d'eau et de dioxygène selon une réaction d'oxydoréduction.
+  Un clou en fer Fe de masse $m = 3","5$ g est enfermé dans un flacon contenant $V_"air" = 0","50$ L d'air humide. Le fer se corrode en présence d'eau et de dioxygène.
 
-  Couples : $"O"_2\/"H"_2"O"$ (demi-équation : $"O"_2 + 4 "H"^+ + 4 e^- = 2 "H"_2"O"$) et $"Fe"^(2+)\/"Fe"$.
+  Couples : $"O"_2\/"H"_2"O"$ ($"O"_2 + 4 "H"^+ + 4 e^- = 2 "H"_2"O"$) et $"Fe"^(2+)\/"Fe"$.
 
-  + Identifier l'oxydant et le réducteur.
-  + Écrire la demi-équation du couple $"Fe"^(2+)\/"Fe"$ avec Fe comme réactif.
-  + Établir l'équation bilan de la corrosion.
-  + Les ions $"Fe"^(2+)$ formés s'oxydent ensuite en $"Fe"^(3+)$ (rouille) par le dioxygène. Écrire l'équation de cette seconde réaction. Couple supplémentaire : $"Fe"^(3+)\/"Fe"^(2+)$.
+  *Données :* $M_"Fe" = 55","8$ g·mol⁻¹ ; l'air contient 21 % de dioxygène en volume ; $V_m = 24$ L·mol⁻¹ à 20 °C.
+
+  + Identifier l'oxydant et le réducteur, puis établir l'équation bilan de la corrosion.
+  + Calculer la quantité de matière de fer $n_"Fe"$ contenue dans le clou.
+  + Calculer le volume de dioxygène contenu dans le flacon, puis sa quantité de matière $n_("O"_2)$.
 ]
 
 #exercice[
-  *Permanganate et eau oxygénée*
+  *Permanganate et eau oxygénée* #h(1fr) _Rappel : $n = C times V$ et $C_m = C times M$_
 
-  En milieu acide, une solution de permanganate de potassium ($"MnO"_4^-$, violet) réagit avec l'eau oxygénée $"H"_2"O"_2$.
+  En milieu acide, une solution violette de permanganate de potassium ($"MnO"_4^-$) réagit avec l'eau oxygénée $"H"_2"O"_2$. On mélange :
+  - $V_1 = 12","0$ mL de solution de permanganate de concentration $C_1 = 2","0 times 10^(-2)$ mol·L⁻¹ ;
+  - $V_2 = 10","0$ mL d'eau oxygénée de concentration en masse $C_(m,2) = 1","7$ g·L⁻¹.
 
-  Couples : $"MnO"_4^-\/"Mn"^(2+)$ et $"O"_2\/"H"_2"O"_2$ ($"O"_2 + 2 "H"^+ + 2 e^- = "H"_2"O"_2$).
+  Couples : $"MnO"_4^-\/"Mn"^(2+)$ et $"O"_2\/"H"_2"O"_2$ ($"O"_2 + 2 "H"^+ + 2 e^- = "H"_2"O"_2$). #h(1em) *Données :* $M_"H" = 1","0$ ; $M_"O" = 16","0$ g·mol⁻¹.
 
-  + Parmi $"MnO"_4^-$ et $"H"_2"O"_2$, lequel est l'oxydant ? Justifier.
-  + Écrire les deux demi-équations en plaçant les réactifs à gauche.
   + Établir l'équation bilan. Que peut-on observer au cours de la réaction ?
+  + Calculer la quantité de matière d'ions permanganate $n_1$ introduite.
+  + Calculer la masse molaire de $"H"_2"O"_2$, puis sa concentration molaire $C_2$. En déduire la quantité de matière $n_2$ introduite.
+  + L'eau oxygénée utilisée a été obtenue en diluant 10 fois une solution commerciale. Quelle est la concentration molaire $C_0$ de la solution commerciale ?
 ]
 
 #exercice[
-  *Reconnaître une réaction d'oxydoréduction*
+  *Le zinc dans l'acide chlorhydrique* #h(1fr) _Tout ensemble !_
 
-  On mélange une solution contenant des ions $"Fe"^(3+)$ (jaune-brun) avec une solution d'iodure de potassium contenant des ions $"I"^-$ (incolore). La solution obtenue prend une couleur brune caractéristique du diiode $"I"_2$.
+  On introduit $m = 0","65$ g de grenaille de zinc Zn dans $V = 50","0$ mL d'acide chlorhydrique ($"H"_3"O"^+$) de concentration $C = 1","0$ mol·L⁻¹. Un gaz se dégage ; on le recueille par déplacement d'eau. Quand tout le zinc a disparu, on a recueilli $V_"gaz" = 0","24$ L de gaz.
 
-  Couples : $"Fe"^(3+)\/"Fe"^(2+)$ et $"I"_2\/"I"^-$.
+  Couples : $"Zn"^(2+)\/"Zn"$ et $"H"_3"O"^+\/"H"_2$. #h(1em) *Données :* $M_"Zn" = 65","4$ g·mol⁻¹ ; $V_m = 24$ L·mol⁻¹.
 
-  + Identifier, à partir de l'observation, l'oxydant et le réducteur.
-  + Écrire les demi-équations avec les réactifs à gauche.
-  + Établir l'équation bilan de la réaction.
-  + La réaction inverse (faire réagir $"Fe"^(2+)$ avec $"I"_2$) peut-elle se produire ? Justifier qualitativement.
-]
-
-#exercice[
-  *Défi — Métaux et solutions acides*
-
-  #text(style: "italic")[
-    On dispose de trois métaux : zinc Zn, cuivre Cu et argent Ag, ainsi que de deux solutions acides : acide chlorhydrique ($"H"_3"O"^+$) et acide nitrique dilué (contenant $"NO"_3^-$ et $"H"^+$). On réalise des tests de réactivité et on observe :
-    - Zn réagit avec l'acide chlorhydrique (dégagement gazeux).
-    - Cu ne réagit pas avec l'acide chlorhydrique.
-    - Cu réagit avec l'acide nitrique dilué (dégagement gazeux brun de NO).
-    - Ag ne réagit pas avec l'acide chlorhydrique.
-  ]
-
-  Couples disponibles : $"Zn"^(2+)\/"Zn"$ ; $"Cu"^(2+)\/"Cu"$ ; $"Ag"^+\/"Ag"$ ; $"H"_3"O"^+\/"H"_2$ ; $"NO"_3^-\/"NO"$ ($"NO"_3^- + 4 "H"^+ + 3 e^- = "NO" + 2 "H"_2"O"$).
-
-  + Écrire l'équation de la réaction entre Zn et $"H"_3"O"^+$. Qu'est-ce que le dégagement gazeux observé ?
-  + Expliquer pourquoi Cu ne réagit pas avec $"H"_3"O"^+$ alors qu'il réagit avec $"NO"_3^-$. Écrire l'équation de la réaction de Cu avec l'acide nitrique.
-  + À partir des observations, proposer un classement des couples par *pouvoir oxydant croissant* de l'oxydant : $"H"_3"O"^+$, $"NO"_3^-$, $"Cu"^(2+)$, $"Zn"^(2+)$.
-  + Prédire si Ag peut réagir avec l'acide nitrique. Justifier.
+  + Établir l'équation bilan. Quel est le gaz recueilli ?
+  + Calculer les quantités de matière initiales de zinc $n_"Zn"$ et d'ions oxonium $n_("H"_3"O"^+)$.
+  + Calculer la quantité de matière de gaz formé.
+  + Comparer la quantité de gaz formé à la quantité de zinc consommé. Ce résultat est-il cohérent avec les nombres stœchiométriques de l'équation ?
 ]
