@@ -40,8 +40,8 @@
 }
 
 // --- PALETTE DES BLOCS (partagée TP / Cours / Évaluations, inspirée Zebra Mildliner) ---
-#let c-definition  = rgb("#85D7E2")  // Mild Cyan (set Friendly)
-#let c-exemple     = rgb("#FFB2B9")  // Mild Coral Pink (set Friendly)
+#let c-definition  = rgb("#F2777A")  // Mild Red
+#let c-exemple     = rgb("#7DA7E3")  // Mild Blue
 #let c-travail     = rgb("#F9AB5E")  // Mild Apricot (set Friendly)
 #let c-important   = rgb("#FAF667")  // Mild Lemon Yellow (set Friendly)
 #let c-application = rgb("#B0E087")  // Mild Green (set Cool & Refined)

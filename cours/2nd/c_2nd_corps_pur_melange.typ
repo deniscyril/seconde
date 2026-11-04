@@ -266,7 +266,13 @@ _Voir le TP « Masse volumique »._
 #chapitre[Corps purs et mélanges — Exercices]
 
 // ───────── aides locales ─────────
-#let titre-ex(t) = text(weight: "bold")[#t]
+// Difficulté : 1 à 3 étoiles, affichées à droite du titre de l'exercice
+#let etoiles(n) = text(font: ("Arial Unicode MS", "Apple Symbols"), size: 11pt, "★" * n)
+#let titre-ex(t, n) = grid(
+  columns: (1fr, auto),
+  align: (left + horizon, right + horizon),
+  text(weight: "bold")[#t], etoiles(n),
+)
 #let c-donnees = rgb("#E07A7A")
 #let donnees(body) = block(
   width: 100%,
@@ -283,10 +289,10 @@ _Voir le TP « Masse volumique »._
 #let chromatogramme(depots, taches) = canvas(length: 1cm, {
   import draw: *
   let n = depots.len()
-  let dx = 0.9
+  let dx = 0.72
   let w = n * dx
-  let h = 4.0
-  rect((0, -0.9), (w, h + 0.6), fill: rgb("#EFEFEF"), stroke: none)
+  let h = 2.8
+  rect((0, -0.9), (w, h + 0.4), fill: rgb("#EFEFEF"), stroke: none)
   // front du solvant
   line((0, h), (w, h), stroke: 0.6pt + gray.darken(20%))
   // ligne de dépôt
@@ -294,25 +300,27 @@ _Voir le TP « Masse volumique »._
   for (i, nom) in depots.enumerate() {
     let x = (i + 0.5) * dx
     line((x, -0.12), (x, 0.12), stroke: 0.6pt + gray.darken(30%))
-    content((x, -0.5), text(size: 9pt, nom))
+    content((x, -0.5), text(size: 8pt, nom))
     for y in taches.at(i) {
       circle((x, y * h), radius: (0.09, 0.14), fill: rgb("#D9443F").lighten(20% + 35% * y), stroke: none)
     }
   }
 })
 
+#align(right, text(size: 9pt)[Difficulté : #etoiles(1) facile #h(0.8em) #etoiles(2) intermédiaire #h(0.8em) #etoiles(3) difficile])
+
+// Fiche d'exercices sur deux colonnes
+#columns(2, gutter: 0.6cm)[
 // ══════════════════════════════════════════════════════
 //  EXERCICE 1 — Masse volumique
 // ══════════════════════════════════════════════════════
 #exercice[
-  #titre-ex[Masse volumique]
+  #titre-ex([Masse volumique], 1)
 
   + *Masse volumique du cyclohexane.* Calculer la masse volumique du cyclohexane en $"g"·"mL"^(-1)$, sachant qu'un volume de 15 mL a une masse de 11,8 g.
 
   + *Volume d'éthanol.* Quel volume d'éthanol, de masse volumique $rho_"éthanol" = 0","78 "g"·"cm"^(-3)$, doit-on prélever pour en avoir 30 g ?
 
-  + *Mélanges.* Chaque mélange est-il homogène ou hétérogène ? \
-    a. Eau + huile. #h(2em) b. Eau + sel. #h(2em) c. Eau + sable.
 
   + *Une canette de mercure.* Calculer la masse d'une canette de soda remplie de mercure liquide. La canette a un volume de 33 cL et la masse volumique du mercure est $rho = 13","5 "kg"·"L"^(-1)$.
 ]
@@ -321,7 +329,7 @@ _Voir le TP « Masse volumique »._
 //  EXERCICE 2 — Eau et éther
 // ══════════════════════════════════════════════════════
 #exercice[
-  #titre-ex[Eau et éther dans une éprouvette]
+  #titre-ex([Eau et éther dans une éprouvette], 2)
 
   On introduit dans une éprouvette graduée 5,0 mL d'eau et 15,0 mL d'éther. On mélange puis on laisse décanter.
 
@@ -330,15 +338,16 @@ _Voir le TP « Masse volumique »._
   + Faire un schéma légendé de l'éprouvette graduée en indiquant la position et la composition des phases.
 
   #donnees[
-    #set text(size: 10pt)
+    #set text(size: 8.5pt)
     #table(
-      columns: (1.3fr, 1fr, 1fr, 1fr),
+      columns: (1.2fr, 1fr, 1fr, 1fr),
+      inset: 4pt,
       align: center + horizon,
       stroke: 0.5pt + c-donnees,
       fill: (_, y) => if y == 0 { c-donnees.lighten(85%) },
-      [*Espèce chimique*], [*Température de fusion* $theta_"f"$], [*Température d'ébullition* $theta_"éb"$], [*Masse volumique* $rho$],
-      [Eau $"H"_2"O"$], [0 °C], [100 °C], [$1","0 "g"·"cm"^(-3)$],
-      [Éther $"C"_4"H"_10"O"$], [−116 °C], [35 °C], [$0","71 "g"·"cm"^(-3)$],
+      [*Espèce chimique*], [*Température de fusion* $theta_"f"$], [*Température d'ébullition* $theta_"éb"$], [*Masse volumique* $rho$ ($"g"·"cm"^(-3)$)],
+      [Eau $"H"_2"O"$], [0 °C], [100 °C], [1,0],
+      [Éther $"C"_4"H"_10"O"$], [−116 °C], [35 °C], [0,71],
     )
   ]
 ]
@@ -347,7 +356,7 @@ _Voir le TP « Masse volumique »._
 //  EXERCICE 3 — Défi : l'œuf qui flotte
 // ══════════════════════════════════════════════════════
 #exercice[
-  #titre-ex[Défi : l'œuf qui flotte]
+  #titre-ex([Défi : l'œuf qui flotte], 3)
   #set enum(numbering: "1.a.")
 
   Un œuf frais coule au fond d'un verre d'eau douce, mais il flotte dans une eau suffisamment salée. L'œuf étudié a une masse de 66 g et un volume de 60 mL. \
@@ -370,18 +379,57 @@ _Voir le TP « Masse volumique »._
 ]
 
 // ══════════════════════════════════════════════════════
-//  EXERCICE 4 — CCM (nouvelle page pour ne pas couper les chromatogrammes)
+//  EXERCICE 4 — Argent massif ou alliage ?
 // ══════════════════════════════════════════════════════
-#pagebreak(weak: true)
 #exercice[
-  #titre-ex[Chromatographie sur couche mince (CCM)]
+  #titre-ex([Argent massif ou alliage ?], 2)
+
+  Un bijoutier veut vérifier trois bijoux vendus comme étant « en argent ». Pour chacun, il mesure la masse avec une balance, puis le volume en plongeant le bijou dans une éprouvette graduée contenant de l'eau.
+
+  #align(center)[
+    #set text(size: 9pt)
+    #table(
+      columns: 4,
+      align: center + horizon,
+      inset: (x: 5pt, y: 4pt),
+      stroke: 0.5pt + luma(150),
+      fill: (_, y) => if y == 0 { luma(235) },
+      [*Bijou*], [*Masse*], [*Volume d'eau avant*], [*Volume d'eau après*],
+      [A : bracelet], [52,5 g], [20,0 mL], [25,0 mL],
+      [B : chaîne], [41,6 g], [20,0 mL], [24,0 mL],
+      [C : pendentif], [25,5 g], [30,0 mL], [33,0 mL],
+    )
+  ]
+
+  + Expliquer comment la mesure dans l'éprouvette permet de connaître le volume du bijou. Calculer le volume de chaque bijou.
+  + Calculer la masse volumique de chaque bijou en $"g"·"cm"^(-3)$.
+  + À l'aide des données, identifier le métal ou l'alliage qui constitue chaque bijou. Lequel est en argent massif pur ?
+  + Un alliage est-il un corps pur ou un mélange ? Justifier.
+  + Les masses volumiques de l'argent pur et de l'argent 925 sont très proches. Quelle précaution faut-il prendre lors des mesures pour pouvoir les distinguer ?
+
+  #donnees[
+    #set text(size: 9.5pt)
+    Masses volumiques en $"g"·"cm"^(-3)$ :
+    - argent pur : 10,5 ;
+    - argent 925 (alliage : 92,5 % d'argent et 7,5 % de cuivre) : 10,4 ;
+    - cuivre : 8,96 ;
+    - laiton (alliage de cuivre et de zinc) : 8,5.
+    Rappel : $1 "mL" = 1 "cm"^3$.
+  ]
+]
+
+// ══════════════════════════════════════════════════════
+//  EXERCICE 5 — CCM
+// ══════════════════════════════════════════════════════
+#block(breakable: false)[#exercice[
+  #titre-ex([Chromatographie sur couche mince (CCM)], 1)
 
   Les huiles essentielles d'orange (HEO) et de citron (HEC) sont obtenues par expression à froid : le zeste est pressé pour recueillir l'huile. Elles sont riches en molécules odorantes. On réalise deux CCM afin d'identifier quelques espèces chimiques présentes dans ces huiles essentielles.
 
   #align(center)[
     #grid(
       columns: 2,
-      column-gutter: 1.5cm,
+      column-gutter: 0.5cm,
       chromatogramme(
         ("HEC", "Lim", "G", "Lin", "Ci"),
         ((0.25, 0.57, 0.80), (0.25,), (0.84,), (0.80,), (0.57,)),
@@ -396,13 +444,13 @@ _Voir le TP « Masse volumique »._
   ]
 
   Indiquer quelles sont les espèces chimiques présentes dans les deux huiles essentielles en exploitant les résultats des CCM.
-]
+]]
 
 // ══════════════════════════════════════════════════════
-//  EXERCICE 5 — Changement d'état
+//  EXERCICE 6 — Changement d'état
 // ══════════════════════════════════════════════════════
-#exercice[
-  #titre-ex[Changement d'état]
+#block(breakable: false)[#exercice[
+  #titre-ex([Changement d'état], 2)
 
   On place un tube à essai contenant un liquide X dans un cristallisoir contenant un mélange réfrigérant (eau, glace et sel) et on mesure la température du liquide à intervalle de temps régulier.
   La courbe donnant l'évolution de la température du liquide X en fonction du temps est donnée ci-dessous.
@@ -412,13 +460,13 @@ _Voir le TP « Masse volumique »._
   + En utilisant les données, en déduire le nom de ce corps pur.
 
   #grid(
-    columns: (auto, 1fr),
-    column-gutter: 0.8cm,
-    align: horizon,
+    columns: 1,
+    row-gutter: 0.8em,
+    align: center,
     canvas(length: 1cm, {
       import draw: *
-      let sx = 0.4    // cm par minute
-      let sy = 0.24   // cm par °C
+      let sx = 0.3    // cm par minute
+      let sy = 0.18   // cm par °C
       let pts = (
         (0, 20), (1, 18), (2, 16), (3, 14), (4, 12), (5, 10), (6, 8),
         (7, 6.5), (8, 6.5), (9, 6.5), (10, 6.5),
@@ -436,7 +484,7 @@ _Voir le TP « Masse volumique »._
       line((0, -5 * sy), (0, 21.5 * sy), mark: (end: "stealth"), stroke: 0.7pt)
       line((0, 0), (21.5 * sx, 0), mark: (end: "stealth"), stroke: 0.7pt)
       content((0.15, 21.5 * sy), anchor: "west", text(size: 9pt)[Température (°C)])
-      content((21.7 * sx, 0), anchor: "west", text(size: 9pt)[Temps (min)])
+      content((21.7 * sx, 0), anchor: "west", text(size: 9pt)[$t$ (min)])
       for t in (5, 10, 15, 20) {
         line((t * sx, -0.08), (t * sx, 0.08), stroke: 0.7pt)
         content((t * sx, -0.12), anchor: "north", text(size: 8.5pt)[#t])
@@ -454,16 +502,71 @@ _Voir le TP « Masse volumique »._
         line((x, y - 0.08), (x, y + 0.08), stroke: 0.6pt)
       }
     }),
-    donnees[
+    align(left, donnees[
       *Température de fusion de quelques corps purs :*
-      #set list(spacing: 0.7em)
-      - $theta_"f, eau" = 0 "°C"$
-      - $theta_"f, éthanol" = -114 "°C"$
-      - $theta_"f, cyclohexane" = 6","5 "°C"$
-      - $theta_"f, éther" = -116 "°C"$
-      - $theta_"f, pentan-3-ol" = -8 "°C"$
-      - $theta_"f, benzène" = 5","5 "°C"$
-      - $theta_"f, méthanamide" = 2","5 "°C"$
-    ],
+      #set text(size: 10pt)
+      #grid(
+        columns: (1fr, 1fr),
+        row-gutter: 0.7em,
+        [• $theta_"f, eau" = 0 "°C"$], [• $theta_"f, pentan-3-ol" = -8 "°C"$],
+        [• $theta_"f, éthanol" = -114 "°C"$], [• $theta_"f, benzène" = 5","5 "°C"$],
+        [• $theta_"f, cyclohexane" = 6","5 "°C"$], [• $theta_"f, méthanamide" = 2","5 "°C"$],
+        [• $theta_"f, éther" = -116 "°C"$],
+      )
+    ]),
   )
+]]
+] // fin des deux colonnes
+
+// ╔══════════════════════════════════════════════════════╗
+// ║  CORRIGÉ SUCCINCT (professeur)                       ║
+// ╚══════════════════════════════════════════════════════╝
+#chapitre[Corrigé succinct — professeur]
+
+#let corr(t) = block(above: 0.9em, below: 0.4em, sticky: true, text(weight: "bold", fill: c-primary)[#t])
+
+#set text(size: 10pt)
+#set par(spacing: 0.6em)
+#set enum(numbering: "1.a.")
+
+#[
+  #corr[Cours]
+  - *Travail à faire :* corps purs : eau distillée, fer, dioxygène… ; mélanges : air, eau salée, lait…
+  - *Autres gaz :* oui, $80 - 17 - 62 = 1 "L"$ (argon, dioxyde de carbone…).
+  - $%_(N_2) = 62 / 80 = 0","775 = 77","5 thin %$.
+
+  #corr[Exercice 1]
+  + $rho = (11","8) / 15 = 0","79 "g"·"mL"^(-1)$.
+  + $V = m / rho = 30 / (0","78) = 38 thin "cm"^3 = 38 "mL"$.
+  + $m = rho × V = 13","5 × 0","33 = 4","5 "kg"$.
+
+  #corr[Exercice 2]
+  + À 20 °C, l'eau ($0 < 20 < 100$) et l'éther ($-116 < 20 < 35$) sont *liquides*.
+  + $m_"eau" = 1","0 × 5","0 = 5","0 "g"$ ; $m_"éther" = 0","71 × 15","0 = 10","7 "g"$.
+  + Deux phases (mélange hétérogène) : *éther en haut* (moins dense, ≈ 15 mL), *eau en bas* (≈ 5 mL).
+
+  #corr[Exercice 3]
+  + $rho_"œuf" = 66 / 60 = 1","10 "g"·"mL"^(-1)$.
+  + $rho_"œuf" > rho_"eau" = 1","00 "g"·"mL"^(-1)$ : l'œuf coule.
+  + + Mélange homogène.
+    + $m_"eau" = 300 "g"$ ; $m_"solution" = 300 + 60 = 360 "g"$.
+    + $rho = 360 / 320 = 1","125 "g"·"mL"^(-1) > 1","10$ : l'œuf flotte.
+  + $(360 + V) / (320 + V) = 1","10 arrow.r.double 360 + V = 352 + 1","10 V arrow.r.double V = 80 "mL"$.
+
+  #corr[Exercice 4]
+  + Le volume du bijou est égal à la hausse du niveau d'eau : $V_A = 5","0 thin "cm"^3$, $V_B = 4","0 thin "cm"^3$, $V_C = 3","0 thin "cm"^3$.
+  + $rho_A = 10","5$ ; $rho_B = 10","4$ ; $rho_C = 8","5 "g"·"cm"^(-3)$.
+  + A : argent pur (massif) ; B : argent 925 ; C : laiton (plaqué argent).
+  + Un alliage est un *mélange* : il contient plusieurs espèces chimiques (argent et cuivre).
+  + L'écart n'est que de 1 % : il faut des mesures très précises (balance précise, éprouvette finement graduée, lecture soignée). Avec ±0,1 mL sur 4 mL (2,5 %), on ne peut pas trancher.
+
+  #corr[Exercice 5]
+  - *HEC :* limonène, citral et linalol (taches à la même hauteur que les références).
+  - *HEO :* limonène et linalol.
+  - Le géraniol n'est présent dans aucune des deux huiles.
+
+  #corr[Exercice 6]
+  + La courbe présente un *palier* : la température reste constante pendant le changement d'état, ce qui caractérise un corps pur.
+  + $theta_"f" = 6","5 "°C"$ (température du palier).
+  + Il s'agit du *cyclohexane*.
 ]
